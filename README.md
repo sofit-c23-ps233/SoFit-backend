@@ -1,2 +1,2 @@
 # user-backend
-API for user
+API for user authentication
