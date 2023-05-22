@@ -23,8 +23,8 @@ exports.register = function (req, res) {
     }
     // Check if the email and username already exists
     con.query(
-      'SELECT * FROM users WHERE email OR username = ?',
-      [email, username],
+      'SELECT * FROM users WHERE email = ?',
+      [email],
       (err, results) => {
         if (err) {
           console.error('Error executing MySQL query: ', err);
@@ -32,7 +32,7 @@ exports.register = function (req, res) {
           return;
         }
         if (results.length > 0) {
-          res.status(409).json({ error: `${email} with ${username} already registered` });
+          res.status(409).json({ error: `${email} already registered` });
           return;
         }
         // Insert the new user into the database
@@ -47,7 +47,7 @@ exports.register = function (req, res) {
               return;
             }
             res.status(201).json({ 
-              message: `${email} with ${username} successfully registered`, 
+              message: `${email} successfully registered`, 
               data:({
                 id_user: id,
                 username: req.body.username,
@@ -63,7 +63,7 @@ exports.register = function (req, res) {
 
 //app.post('/login', (req, res) => 
 exports.login = function (req, res) {
-  const { email, password } = req.body;
+  const { email, username, password } = req.body;
   const hashedPassword = md5(password);
 
   db.getConnection((err, con) => {
@@ -75,8 +75,8 @@ exports.login = function (req, res) {
 
     // Check if the username exists
     con.query(
-      'SELECT * FROM users WHERE email = ?',
-      [email],
+      'SELECT * FROM users WHERE email = ? OR username = ?',
+      [email, username],
       (err, results) => {
         const user = results[0];
         
