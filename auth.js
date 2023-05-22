@@ -61,7 +61,7 @@ exports.register = function (req, res) {
   });
 };
 
-//app.post('/login', (req, res) => 
+
 exports.login = function (req, res) {
   const { email, username, password } = req.body;
   const hashedPassword = md5(password);
@@ -79,7 +79,8 @@ exports.login = function (req, res) {
       [email, username],
       (err, results) => {
         const user = results[0];
-        
+        const { id, email } = results[0];
+
         if (err) {
           console.error('Error executing MySQL query: ', err);
           res.status(500).json({ error: 'Internal server error' });
@@ -91,7 +92,6 @@ exports.login = function (req, res) {
           return;
         }
 
-        const { id, email } = results[0];
         res.status(200).json({ 
           message: 'Login successful',
           id: id,
