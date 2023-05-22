@@ -1,59 +1,59 @@
-
-//const express = require('express');
-//const app = express();
-//const bodyParser = require('body-parser');
 const md5 = require('md5');
 const db = require('./connection');
 const { nanoid } = require('nanoid');
 
-//app.use(bodyParser.urlencoded({ extended: true }));
-//app.use(bodyParser.json());
-
-//app.post('/register', (req, res) => {
 exports.register = function (req, res) {  
-  const { username, password } = req.body;
+  const { 
+    username, 
+    email, 
+    password
+  } = req.body;
   const id = nanoid(8);
-
-  // Hash the password using MD5 (not recommended for secure password storage)
   const hashedPassword = md5(password);
+  // Check if any of the required fields are empty
+  if (!username || !email || !password) {
+    return res.status(400).json({ message: 'Please provide all required fields.' });
+  }
 
-  db.getConnection((err, connection) => {
+  db.getConnection((err, con) => {
     if (err) {
       console.error('Error getting MySQL connection: ', err);
       res.status(500).json({ error: 'Internal server error' });
       return;
     }
-
-    // Check if the username already exists
-    connection.query(
-      'SELECT * FROM user WHERE username = ?',
-      [username],
+    // Check if the email already exists
+    con.query(
+      'SELECT * FROM users WHERE email = ?',
+      [email],
       (err, results) => {
         if (err) {
           console.error('Error executing MySQL query: ', err);
           res.status(500).json({ error: 'Internal server error' });
           return;
         }
-
         if (results.length > 0) {
-          res.status(409).json({ error: 'Username already exists' });
+          res.status(409).json({ error: 'Email already registered' });
           return;
         }
-
         // Insert the new user into the database
-        connection.query(
-          'INSERT INTO user (id, username, password) VALUES (?, ?, ?)',
-          [id, username, hashedPassword],
+        con.query(
+          'INSERT INTO users (id, username, email, password) VALUES (?, ?, ?, ?)',
+          [id, username, email, hashedPassword],
           (err) => {
-            connection.release();
-
+            con.release();
             if (err) {
               console.error('Error executing MySQL query: ', err);
               res.status(500).json({ error: 'Internal server error' });
               return;
             }
-
-            res.status(201).json({ message: 'Registration successful' });
+            res.status(201).json({ 
+              message: 'Registration successful', 
+              data:({
+                id_user: id,
+                username: req.body.username,
+                email: req.body.email,
+            })
+            });
           }
         );
       }
@@ -63,12 +63,10 @@ exports.register = function (req, res) {
 
 //app.post('/login', (req, res) => 
 exports.login = function (req, res) {
-  const { username, password } = req.body;
-
-  // Hash the password using MD5 (not recommended for secure password storage)
+  const { email, password } = req.body;
   const hashedPassword = md5(password);
 
-  db.getConnection((err, connection) => {
+  db.getConnection((err, con) => {
     if (err) {
       console.error('Error getting MySQL connection: ', err);
       res.status(500).json({ error: 'Internal server error' });
@@ -76,30 +74,33 @@ exports.login = function (req, res) {
     }
 
     // Check if the username exists
-    connection.query(
-      'SELECT * FROM user WHERE username = ?',
-      [username],
+    con.query(
+      'SELECT * FROM users WHERE email = ?',
+      [email],
       (err, results) => {
+        const user = results[0];
+        
         if (err) {
           console.error('Error executing MySQL query: ', err);
           res.status(500).json({ error: 'Internal server error' });
           return;
         }
 
-        if (results.length === 0) {
+        if (results.length === 0 || hashedPassword !== user.password) {
           res.status(401).json({ error: 'Invalid credentials' });
           return;
         }
 
-        const user = results[0];
-
-        // Compare the provided password with the hashed password in the database
-        if (hashedPassword !== user.password) {
-          res.status(401).json({ error: 'Invalid credentials' });
-          return;
-        }
-
-        res.status(200).json({ message: 'Login successful' });
+        /*var data = {
+          id: id,
+          email: email, 
+        }*/
+        const { id, email } = results[0];
+        res.status(200).json({ 
+          message: 'Login successful',
+          id: id,
+          email: email,
+        });
       }
     );
   });
