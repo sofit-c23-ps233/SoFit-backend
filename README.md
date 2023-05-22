@@ -76,8 +76,6 @@
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 <div align=center>
-
-[![Product Name Screen Shot][product-screenshot]](https://example.com)
 </div>
 
 ### Features
@@ -94,7 +92,7 @@
 <!-- [![WebpackPack][Webpack.build]][Webpack-url]
 [![Tailwind][Tailwindcss.com]][Tailwind-url]
 [![Bootstrap][Bootstrap.com]][Bootstrap-url] -->
-[![AmazonAWS][Amazon.com]][Amazon-url]
+[![Google Cloud][Amazon.com]][Amazon-url]
 <!-- [![Prisma][Prisma.com]][Prisma-url] -->
 
 
@@ -161,28 +159,6 @@ To get a local copy up and running follow these simple steps.
 _For more examples, please refer to the [Documentation](https://example.com)_
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p> -->
-
-
-
-<!-- ROADMAP -->
-## Roadmap
-
-- [x] Prepare Frameworks and Libraries
-- [x] Create UI / UX
-- [x] Create Database
-- [x] Frontend
-    - [x] Create Homepage
-    - [x] Create Halaman Teman
-    - [x] Create Halaman Kegiatan
-- [x] Backend
-    - [x] Create API
-    - [x] Connect API to Database
-    - [x] Connect API to Frontend
-- [x] Create Dashboard
-- [x] Create Admin Panel
-- [x] Deploy Website
-
-<!-- See the [open issues](https://github.com/othneildrew/Best-README-Template/issues) for a full list of proposed features (and known issues). -->
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
