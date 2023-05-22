@@ -31,7 +31,7 @@
 <br />
 <div align="center">
   <a href="https://github.com/othneildrew/Best-README-Template">
-    <img src="https://slackmojis.com/emojis/4897-gears_spinning/download" alt="Logo" height="80">
+    <img src="https://slackmojis.com/emojis/2967-api/download" alt="Logo" height="80">
   </a>
 
   <h3 align="center">SoFit User Backend</h3>
