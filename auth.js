@@ -32,7 +32,7 @@ exports.register = function (req, res) {
           return;
         }
         if (results.length > 0) {
-          res.status(409).json({ error: 'Email already registered' });
+          res.status(409).json({ error: `${email} already registered` });
           return;
         }
         // Insert the new user into the database
@@ -47,7 +47,7 @@ exports.register = function (req, res) {
               return;
             }
             res.status(201).json({ 
-              message: 'Registration successful', 
+              message: `${email} successfully registered`, 
               data:({
                 id_user: id,
                 username: req.body.username,
