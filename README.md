@@ -210,18 +210,14 @@ Use this space to list resources you find helpful and would like to give credit 
 <!-- MARKDOWN LINKS & IMAGES -->
 <!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
 [contributors-shield]: https://img.shields.io/github/contributors-anon/facronactz/teko?style=for-the-badge
-[contributors-url]: https://github.com/facronactz/teko/graphs/contributors
+[contributors-url]: [https://github.com/sofit-c23-ps233/SoFit-backend/graphs/contributors]
 [forks-shield]: https://img.shields.io/github/forks/facronactz/teko?style=for-the-badge
-[forks-url]: https://github.com/facronactz/teko/network/members
+[forks-url]: https://github.com/sofit-c23-ps233/SoFit-backend/network/members
 [stars-shield]: https://img.shields.io/github/stars/facronactz/teko.svg?style=for-the-badge
-[stars-url]: https://github.com/facronactz/teko/stargazers
-[issues-shield]: https://img.shields.io/github/issues/facronactz/teko.svg?style=for-the-badge
-[issues-url]: https://github.com/facronactz/teko/issues
 [license-shield]: https://img.shields.io/github/license/facronactz/teko.svg?style=for-the-badge
 [license-url]: https://github.com/facronactz/teko/blob/master/LICENSE.txt
 [linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555
 [linkedin-url]: https://linkedin.com/in/othneildrew
-[product-screenshot]: https://i.ibb.co/KhDSRDQ/Screenshot-2022-11-14-at-15-03-49-Teko.png
 
 [Node.js]: https://img.shields.io/badge/Node.js-339933?style=for-the-badge&logo=nodedotjs&logoColor=white
 [Nodejs-url]: https://nodejs.org/en/
