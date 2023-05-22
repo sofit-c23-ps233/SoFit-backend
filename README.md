@@ -149,8 +149,8 @@ Distributed under the MIT License. See `LICENSE.md` for more information.
 <!-- CONTACT -->
 ## Contact
 
-1. Rifqi Alamsyah - email
-2. Rastra Wardana Nanditama - email
+1. Rifqi Alamsyah - https://www.linkedin.com/in/rifqialamsyh/
+2. Rastra Wardana Nanditama - https://www.linkedin.com/in/rastrawrdn/
 
 Project Link: https://github.com/sofit-c23-ps233/SoFit-backend.git
 
