@@ -21,10 +21,10 @@ exports.register = function (req, res) {
       res.status(500).json({ error: 'Internal server error' });
       return;
     }
-    // Check if the email already exists
+    // Check if the email and username already exists
     con.query(
-      'SELECT * FROM users WHERE email = ?',
-      [email],
+      'SELECT * FROM users WHERE email OR username = ?',
+      [email, username],
       (err, results) => {
         if (err) {
           console.error('Error executing MySQL query: ', err);
@@ -32,7 +32,7 @@ exports.register = function (req, res) {
           return;
         }
         if (results.length > 0) {
-          res.status(409).json({ error: `${email} already registered` });
+          res.status(409).json({ error: `${email} with ${username} already registered` });
           return;
         }
         // Insert the new user into the database
@@ -47,7 +47,7 @@ exports.register = function (req, res) {
               return;
             }
             res.status(201).json({ 
-              message: `${email} successfully registered`, 
+              message: `${email} with ${username} successfully registered`, 
               data:({
                 id_user: id,
                 username: req.body.username,
