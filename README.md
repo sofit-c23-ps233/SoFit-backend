@@ -18,12 +18,20 @@
 *** for contributors-url, forks-url, etc. This is an optional, concise syntax you may use.
 *** https://www.markdownguide.org/basic-syntax/#reference-style-links
 -->
+<div align="center">
+
+[![Contributors]][contributors-url]
+[![Forks][forks-shield]][forks-url]
+[![MIT License][license-shield]][license-url]
+
+</div>
+
 
 <!-- PROJECT LOGO -->
 <br />
 <div align="center">
   <a href="https://github.com/othneildrew/Best-README-Template">
-    <img src="https://slackmojis.com/emojis/4897-gears_spinning" alt="Logo" height="80">
+    <img src="https://slackmojis.com/emojis/4897-gears_spinning/download" alt="Logo" height="80">
   </a>
 
   <h3 align="center">SoFit User Backend</h3>
@@ -140,19 +148,6 @@ To get a local copy up and running follow these simple steps.
    ```
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
-
-
-
-<!-- USAGE -->
-<!-- ## Usage
-
-_For more examples, please refer to the [Documentation](https://example.com)_
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p> -->
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
-
-
 
 <!-- LICENSE -->
 ## License
