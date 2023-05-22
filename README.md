@@ -77,7 +77,7 @@
 ### Features
 
 * User API
-
+<!-- 
 ### Built With
 
 <div align="center">
@@ -87,7 +87,7 @@
 
 
 
-</div>
+</div> -->
 
 
 ### Tools
@@ -98,11 +98,6 @@
 [![VSCode][VSCode.com]][VSCode-url]
 [![ESLint][ESLint.com]][ESLint-url]
 [![Postman][Postman.com]][Postman-url]
-<!-- [![Vercel][Vercel.com]][Vercel-url] -->
-
-<!-- [![Jira][Jira.com]][Jira-url]
-[![Figma][Figma.com]][Figma-url] -->
-
 
 </div>
 
