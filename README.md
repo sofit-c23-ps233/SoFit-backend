@@ -18,20 +18,12 @@
 *** for contributors-url, forks-url, etc. This is an optional, concise syntax you may use.
 *** https://www.markdownguide.org/basic-syntax/#reference-style-links
 -->
-<div align="center">
-
-[![Contributors]][contributors-url]
-[![Forks][forks-shield]][forks-url]
-[![MIT License][license-shield]][license-url]
-
-</div>
-
 
 <!-- PROJECT LOGO -->
 <br />
 <div align="center">
   <a href="https://github.com/othneildrew/Best-README-Template">
-    <img src="https://slackmojis.com/emojis/16106-teapot/image/1643515590/teapot.gif" alt="Logo" height="80">
+    <img src="https://slackmojis.com/emojis/4897-gears_spinning" alt="Logo" height="80">
   </a>
 
   <h3 align="center">SoFit User Backend</h3>
