@@ -91,10 +91,6 @@ exports.login = function (req, res) {
           return;
         }
 
-        /*var data = {
-          id: id,
-          email: email, 
-        }*/
         const { id, email } = results[0];
         res.status(200).json({ 
           message: 'Login successful',
@@ -105,7 +101,3 @@ exports.login = function (req, res) {
     );
   });
 };
-
-/*app.listen(3000, () => {
-  console.log('Server is running on http://localhost:3000');
-});*/
