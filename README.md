@@ -19,9 +19,7 @@
 *** https://www.markdownguide.org/basic-syntax/#reference-style-links
 -->
 <div align="center">
-
-[![Contributors]][contributors-url]
-[![Forks][forks-shield]][forks-url]
+  
 [![MIT License][license-shield]][license-url]
 
 </div>
@@ -85,13 +83,8 @@
 <div align="center">
 
 [![Node.js][Node.js]][Nodejs-url]
-<!-- [![Next][Next.js]][Next-url] -->
-<!-- [![React][React.js]][React-url] -->
-<!-- [![WebpackPack][Webpack.build]][Webpack-url]
-[![Tailwind][Tailwindcss.com]][Tailwind-url]
-[![Bootstrap][Bootstrap.com]][Bootstrap-url] -->
-[![Google Cloud][Amazon.com]][Amazon-url]
-<!-- [![Prisma][Prisma.com]][Prisma-url] -->
+[![GoogleCloud][GoogleCloud.com]][GoogleCloud-url]
+
 
 
 </div>
@@ -194,10 +187,6 @@ Use this space to list resources you find helpful and would like to give credit 
 
 <!-- MARKDOWN LINKS & IMAGES -->
 <!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
-[contributors-url]: https://github.com/sofit-c23-ps233/SoFit-backend/graphs/contributors
-[forks-shield]: https://img.shields.io/github/forks/facronactz/teko?style=for-the-badge
-[forks-url]: https://github.com/sofit-c23-ps233/SoFit-backend/network/members
-[stars-shield]: https://img.shields.io/github/stars/facronactz/teko.svg?style=for-the-badge
 [license-shield]: https://img.shields.io/github/license/facronactz/teko.svg?style=for-the-badge
 [license-url]: https://github.com/facronactz/teko/blob/master/LICENSE.txt
 [linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555
@@ -205,26 +194,9 @@ Use this space to list resources you find helpful and would like to give credit 
 
 [Node.js]: https://img.shields.io/badge/Node.js-339933?style=for-the-badge&logo=nodedotjs&logoColor=white
 [Nodejs-url]: https://nodejs.org/en/
-[Next.js]: https://img.shields.io/badge/next.js-000000?style=for-the-badge&logo=nextdotjs&logoColor=white
-[Next-url]: https://nextjs.org/
-[React.js]: https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB
-[React-url]: https://reactjs.org/
-[Webpack.build]: https://img.shields.io/badge/Webpack-8DD6F9?style=for-the-badge&logo=Webpack&logoColor=white
-[Webpack-url]: https://webpack.js.org/
-[Bootstrap.com]: https://img.shields.io/badge/Bootstrap-563D7C?style=for-the-badge&logo=bootstrap&logoColor=white
-[Bootstrap-url]: https://getbootstrap.com
-[Tailwindcss.com]: https://img.shields.io/badge/Tailwind_CSS-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white
-[Tailwind-url]: https://tailwindcss.com/
-[Prisma.com]: https://img.shields.io/badge/Prisma-3982CE?style=for-the-badge&logo=Prisma&logoColor=white
-[Prisma-url]: https://prisma.io/
-[Sqlite.com]:https://img.shields.io/badge/SQLite-07405E?style=for-the-badge&logo=sqlite&logoColor=white
-[Sqlite-url]: https://www.sqlite.org/index.html
 
-[Amazon.com]: https://img.shields.io/badge/Amazon_AWS-232F3E?style=for-the-badge&logo=amazon-aws&logoColor=white
-[Amazon-url]: https://aws.amazon.com/
-
-[Vercel.com]: https://img.shields.io/badge/Vercel-000000?style=for-the-badge&logo=vercel&logoColor=white
-[Vercel-url]: https://vercel.com/
+[GoogleCloud.com]: https://www.google.com/url?sa=i&url=https%3A%2F%2Fseeklogo.com%2Fvector-logo%2F336116%2Fgoogle-cloud&psig=AOvVaw3hv6knkKJn3NZ8IDfQMxtl&ust=1684813054573000&source=images&cd=vfe&ved=0CBEQjRxqFwoTCIDq7u__h_8CFQAAAAAdAAAAABAE
+[GoogleCloud-url]: https://cloud.google..com/
 
 [ESLint.com]: https://img.shields.io/badge/eslint-3A33D1?style=for-the-badge&logo=eslint&logoColor=white
 [ESLint-url]: https://eslint.org/
@@ -238,5 +210,3 @@ Use this space to list resources you find helpful and would like to give credit 
 [VSCode-url]: https://code.visualstudio.com/
 [Figma.com]: https://img.shields.io/badge/Figma-F24E1E?style=for-the-badge&logo=figma&logoColor=white
 [Figma-url]: https://www.figma.com/
-[Jira.com]: https://img.shields.io/badge/Jira-0052CC?style=for-the-badge&logo=jira&logoColor=white
-[Jira-url]: https://www.atlassian.com/software/jira
