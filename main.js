@@ -1,12 +1,16 @@
+require('dotenv').config();
 const express = require('express');
 const app = express();
 const bodyParser = require('body-parser');
+const port = process.env.PORT 
+const host = process.env.DB_HOST 
+
 
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 
-app.use('/auth', require('./routes'));
+app.use('/auth', require('./auth/routes'));
 
-app.listen(3000, () => {
-    console.log('Server is running on http://localhost:3000');
+app.listen(port, () => {
+    console.log(`API Server is running on http://${host}:${port}`);
   });
