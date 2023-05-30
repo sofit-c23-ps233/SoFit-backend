@@ -1,6 +1,3 @@
-// main
-// getResultHistory
-// postResult
 const db = require("./connection")
 var mysql = require('mysql');
 const { nanoid } = require('nanoid')
@@ -41,17 +38,94 @@ exports.getResultHistory = function (req, res) {
     var id = req.params.id
 
     db.query('SELECT * FROM history_result WHERE user_id = ?', id, function (error, results, fields) {
-        if (error) {
-            res.status(500).json({
+        if (results.length == 0) {
+            res.status(404).json({
                 success: false,
-                message: error
+                message: `Result's history with id ${id} not found`,
             })
         } else {
-            res.status(200).json({
-                success: true,
-                message: 'Success get result',
-                data: results
-            })
+            if (error) {
+                res.status(500).json({
+                    success: false,
+                    message: error
+                })
+            } else {
+                res.status(200).json({
+                    success: true,
+                    message: 'Success get result',
+                    data: results
+                })
+            }
         }
     })
+}
+
+exports.deleteResultHistory = function (req, res) {
+    var query = "DELETE FROM history_result WHERE result_id = ?"
+    var value = req.params.id
+
+    query = mysql.format(query, value)
+    db.query(query, function (error, results, fields) {
+        if (results.affectedRows == 0) {
+            res.status(404).json({
+                success: false,
+                message: `Result's history with id ${value} not found`,
+            })
+        } else {
+            if (error) {
+                res.status(500).json({
+                    success: false,
+                    message: error
+                })
+            } else {
+                res.status(200).json({
+                    success: true,
+                    message: `Success delete result's history with id ${value}`,
+                })
+            }
+        }
+    })
+}
+
+exports.getAllResults = function (req, res) {
+    var query = "SELECT * FROM history_result"
+    db.query(query, function (error, results, fields) {
+        if (results.length == 0) {
+            res.status(404).json({
+                success: false,
+                message: `Result's history not found`,
+            })
+        } else {
+            if (error) {
+                res.status(500).json({
+                    success: false,
+                    message: error
+                })
+            } else {
+                res.status(200).json({
+                    success: true,
+                    message: 'Success get result',
+                    data: results
+                })
+            }
+        }
+    })
+}
+
+exports.getAllUser = function (req, res) {
+    var query = "SELECT * FROM users"
+    db.query(query, function (error, results, fields) {
+            if (error) {
+                res.status(500).json({
+                    success: false,
+                    message: error
+                })
+            } else {
+                res.status(200).json({
+                    success: true,
+                    message: 'Success get user',
+                    data: results
+                })
+            }
+        })
 }

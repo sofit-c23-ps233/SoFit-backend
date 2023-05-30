@@ -7,6 +7,12 @@ module.exports = (app) => {
 
     app.route('/add-result').post(handler.postResult);
 
-    app.route('/get-result/:id').get(handler.getResultHistory);
+    app.route('/result/:id').get(handler.getResultHistory);
+
+    app.route('/delete-result/:id').delete(handler.deleteResultHistory);
+
+    app.route('/result').get(handler.getAllResults);
+
+    app.route('/user').get(handler.getAllUser);
 
 }
