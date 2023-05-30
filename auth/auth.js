@@ -51,7 +51,10 @@ exports.register = function (req, res) {
                         res.status(201).json({
                             success: true,
                             message: 'Register success',
-                            data: data
+                            data: {
+                                username: data.username,
+                                email: data.email,
+                            }
                         })
                     }
                 })

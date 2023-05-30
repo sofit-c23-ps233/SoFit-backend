@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: May 22, 2023 at 04:35 AM
+-- Generation Time: May 29, 2023 at 09:08 AM
 -- Server version: 10.4.28-MariaDB
 -- PHP Version: 8.2.4
 
@@ -24,6 +24,19 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
+-- Table structure for table `history_result`
+--
+
+CREATE TABLE `history_result` (
+  `result_id` varchar(25) NOT NULL,
+  `user_id` varchar(25) NOT NULL,
+  `category` varchar(20) DEFAULT NULL,
+  `result_date` date DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `users`
 --
 
@@ -39,6 +52,7 @@ CREATE TABLE `users` (
 --
 
 INSERT INTO `users` (`id`, `username`, `email`, `password`) VALUES
+('7FlY7G8v', 'ther1ple', 'nandi@rocketmail.com', '7488e331b8b64e5794da3fa4eb10ad5d'),
 ('e_QbB3EK', 'nandogaming', 'nandogaming@gmail.com', 'c991c111903bedc4844136b3f92f5714'),
 ('fqPbTz_I', 'theriple', 'nandi@gmail.com', '7488e331b8b64e5794da3fa4eb10ad5d');
 
@@ -47,10 +61,27 @@ INSERT INTO `users` (`id`, `username`, `email`, `password`) VALUES
 --
 
 --
+-- Indexes for table `history_result`
+--
+ALTER TABLE `history_result`
+  ADD PRIMARY KEY (`result_id`),
+  ADD KEY `user_id` (`user_id`);
+
+--
 -- Indexes for table `users`
 --
 ALTER TABLE `users`
   ADD PRIMARY KEY (`id`);
+
+--
+-- Constraints for dumped tables
+--
+
+--
+-- Constraints for table `history_result`
+--
+ALTER TABLE `history_result`
+  ADD CONSTRAINT `history_result_ibfk_1` FOREIGN KEY (`user_id`) REFERENCES `users` (`id`);
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
