@@ -63,7 +63,7 @@
     </li>
     <li><a href="#license">License</a></li>
     <li><a href="#contact">Contact</a></li>
-    <li><a href="#acknowledgments">Acknowledgments</a></li>
+    <!-- <li><a href="#acknowledgments">Acknowledgments</a></li> -->
   </ol>
 </details>
 
@@ -108,7 +108,6 @@
 
 <!-- GETTING STARTED -->
 ## Getting Started
-This is dev branch for backend.
 To get a local copy up and running follow these simple steps.
 
 ### Prerequisites
@@ -158,25 +157,7 @@ Project Link: https://github.com/sofit-c23-ps233/SoFit-backend.git
 
 
 
-<!-- ACKNOWLEDGMENTS -->
-## Acknowledgments
-<!-- 
-Use this space to list resources you find helpful and would like to give credit to. I've included a few of my favorites to kick things off! -->
-* [Dicoding Indonesia](https://www.dicoding.com)
-<!-- * [Next Auth](https://next-auth.js.org)
-* [SWR](https://swr.vercel.app)
-* [Bcypt](https://github.com/kelektiv/node.bcrypt.js)
-* [React Icons](https://react-icons.github.io/react-icons)
-* [React Bootstrap](https://react-bootstrap.github.io)
-* [React Loading Skeleton](https://github.com/dvtng/react-loading-skeleton)
-* [Sweet Alert2](https://sweetalert2.github.io/)
-* [React Tags Input](https://github.com/olahol/react-tagsinput)
-* [Google Fonts](https://fonts.google.com)
-* [Undraw](https://undraw.co/illustrations)
-* [Load Awsome](https://labs.danielcardoso.net/load-awesome)
-* [Badge Template](https://github.com/alexandresanlim/Badges4-README.md-Profile) -->
 
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 
 
@@ -186,13 +167,8 @@ Use this space to list resources you find helpful and would like to give credit 
 [license-url]: https://github.com/facronactz/teko/blob/master/LICENSE.txt
 [linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555
 [linkedin-url]: https://linkedin.com/in/othneildrew
-
 [Node.js]: https://img.shields.io/badge/Node.js-339933?style=for-the-badge&logo=nodedotjs&logoColor=white
 [Nodejs-url]: https://nodejs.org/en/
-
-[GoogleCloud.com]: https://www.google.com/url?sa=i&url=https%3A%2F%2Fseeklogo.com%2Fvector-logo%2F336116%2Fgoogle-cloud&psig=AOvVaw3hv6knkKJn3NZ8IDfQMxtl&ust=1684813054573000&source=images&cd=vfe&ved=0CBEQjRxqFwoTCIDq7u__h_8CFQAAAAAdAAAAABAE
-[GoogleCloud-url]: https://cloud.google..com/
-
 [ESLint.com]: https://img.shields.io/badge/eslint-3A33D1?style=for-the-badge&logo=eslint&logoColor=white
 [ESLint-url]: https://eslint.org/
 [Postman.com]: https://img.shields.io/badge/Postman-FF6C37?style=for-the-badge&logo=Postman&logoColor=white
@@ -203,5 +179,3 @@ Use this space to list resources you find helpful and would like to give credit 
 [GitHub-url]: https://github.com
 [VSCode.com]: https://img.shields.io/badge/VSCode-0078D4?style=for-the-badge&logo=visual%20studio%20code&logoColor=white
 [VSCode-url]: https://code.visualstudio.com/
-[Figma.com]: https://img.shields.io/badge/Figma-F24E1E?style=for-the-badge&logo=figma&logoColor=white
-[Figma-url]: https://www.figma.com/

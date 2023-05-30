@@ -16,6 +16,7 @@
         "global-require": "off",
         "func-names"    : "off",
         "consistent-return": "off",
-        "no-shadow"     : "off"
+        "no-shadow"     : "off",
+        "linebreak-style" :"off"
     }
 }
