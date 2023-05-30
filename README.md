@@ -36,7 +36,7 @@
 
   <p align="center">
     <br />
-    <a href="/"><strong>API docs»</strong></a>
+    <a href="https://documenter.getpostman.com/view/23251415/2s93m911te"><strong>API docs»</strong></a>
     <br />
     <br />
   </p>
