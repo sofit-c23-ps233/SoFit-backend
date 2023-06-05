@@ -85,6 +85,7 @@ exports.login = function (req, res) {
         success: true,
         message: 'Login success',
         data: {
+          id: rows[0].id,
           username: rows[0].username,
           email: rows[0].email,
         },

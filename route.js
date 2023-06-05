@@ -12,4 +12,8 @@ module.exports = (app) => {
   app.route('/result').get(handler.getAllResults);
 
   app.route('/user').get(handler.getAllUser);
+
+  app.route('/edit-profile').put(handler.editProfile);
+
+  app.route('/delete-user/:id').delete(handler.deleteUser);
 };
