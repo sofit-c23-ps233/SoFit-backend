@@ -123,3 +123,66 @@ exports.getAllUser = function (req, res) {
     }
   });
 };
+
+exports.editProfile = function (req, res) {
+  let query = 'UPDATE users SET username = ?, email = ? WHERE id = ?';
+
+  const value = [req.body.username, req.body.email, req.body.id];
+
+  query = mysql.format(query, value);
+  db.query(query, (err) => {
+    if (err) {
+      return res.status(500).json({
+        success: false,
+        message: 'Internal Server Error',
+        err,
+      });
+    }
+    res.status(200).json({
+      success: true,
+      message: 'Edit profile success',
+      data: {
+        username: req.body.username,
+        email: req.body.email,
+      },
+    });
+  });
+};
+
+// delete user from with history_result
+exports.deleteUser = function (req, res) {
+  let deleteQuery = 'DELETE FROM users WHERE id = ?';
+  let deleteResultQuery = 'DELETE FROM history_result WHERE user_id = ?';
+  const value = req.params.id;
+
+  deleteQuery = mysql.format(deleteQuery, value);
+  deleteResultQuery = mysql.format(deleteResultQuery, value);
+
+  db.query(deleteQuery, (error, results) => {
+    if (results === 0) {
+      res.status(404).json({
+        success: false,
+        message: `User with id ${value} not found`,
+      });
+    }
+    if (error) {
+      res.status(500).json({
+        success: false,
+        message: error,
+      });
+    }
+    db.query(deleteResultQuery, (err) => {
+      if (err) {
+        res.status(500).json({
+          success: false,
+          message: error,
+        });
+      } else {
+        res.status(200).json({
+          success: true,
+          message: `Success delete user with id ${value}`,
+        });
+      }
+    });
+  });
+};
