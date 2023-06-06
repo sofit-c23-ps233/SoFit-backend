@@ -5,7 +5,7 @@ const db = require('./connection');
 exports.main = function (req, res) {
   res.status(200).json({
     success: true,
-    message: 'Welcome to SoFit API',
+    message: 'Welcome to SoFit API. For more information please read the API Documentation : https://documenter.getpostman.com/view/23251415/2s93m911te',
   });
 };
 
