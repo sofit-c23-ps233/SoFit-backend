@@ -187,15 +187,15 @@ exports.deleteUser = function (req, res) {
   });
 };
 
-// get recomendation data
-exports.getRecomendation = function (req, res) {
+// get recommendation data
+exports.getRecommendation = function (req, res) {
   const query = 'SELECT * FROM recomendation WHERE cat_id = ?';
   const value = req.params.id;
   db.query(query, value, (error, results) => {
     if (results.length === 0) {
       res.status(404).json({
         success: false,
-        message: 'Recomendation not found',
+        message: 'Recommendation not found',
       });
     } else if (error) {
       res.status(500).json({
@@ -205,7 +205,7 @@ exports.getRecomendation = function (req, res) {
     } else {
       res.status(200).json({
         success: true,
-        message: 'Success get recomendation',
+        message: 'Success get Recommendation',
         data: results,
       });
     }
