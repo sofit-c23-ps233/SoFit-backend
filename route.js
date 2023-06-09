@@ -16,4 +16,6 @@ module.exports = (app) => {
   app.route('/edit-profile').put(handler.editProfile);
 
   app.route('/delete-user/:id').delete(handler.deleteUser);
+
+  app.route('/recomendation/:id').get(handler.getRecomendation);
 };
