@@ -17,5 +17,5 @@ module.exports = (app) => {
 
   app.route('/delete-user/:id').delete(handler.deleteUser);
 
-  app.route('/recomendation/:id').get(handler.getRecommendation);
+  app.route('/recommendation/:id').get(handler.getRecommendation);
 };
