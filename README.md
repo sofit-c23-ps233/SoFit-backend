@@ -1,4 +1,4 @@
-# API Installation Guide
+# SoFit API Installation Guide
 
 This guide will walk you through the process of setting up and installing an API using Express.js.
 
@@ -23,7 +23,7 @@ Follow the steps below to set up your API:
 
 2. **Clone the Repository in Google Cloud Platform**
 
-   After creating the Cloud SQL, you can clone the repository to your local machine:
+   After creating the Cloud SQL, you can clone the repository:
 
    ```
    git clone https://github.com/sofit-c23-ps233/SoFit-backend.git
@@ -83,8 +83,8 @@ Distributed under the MIT License. See `LICENSE.md` for more information.
 
 
 
-<!-- CONTACT -->
-## Contact
+<!-- CONTRIBUTORS -->
+## Contributors
 
 1. Rifqi Alamsyah - https://www.linkedin.com/in/rifqialamsyh/
 2. Rastra Wardana Nanditama - https://www.linkedin.com/in/rastrawrdn/
@@ -92,22 +92,3 @@ Distributed under the MIT License. See `LICENSE.md` for more information.
 Project Link: https://github.com/sofit-c23-ps233/SoFit-backend.git
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
-
-
-
-
-
-
-
-<!-- MARKDOWN LINKS & IMAGES -->
-<!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
-[license-shield]: https://img.shields.io/github/license/facronactz/teko.svg?style=for-the-badge
-[license-url]: https://github.com/facronactz/teko/blob/master/LICENSE.txt
-[linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555
-[linkedin-url]: https://linkedin.com/in/othneildrew
-[Git.com]: https://img.shields.io/badge/GIT-E44C30?style=for-the-badge&logo=git&logoColor=white
-[Git-url]: https://git-scm.com/
-[GitHub.com]: https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white
-[GitHub-url]: https://github.com
-[VSCode.com]: https://img.shields.io/badge/VSCode-0078D4?style=for-the-badge&logo=visual%20studio%20code&logoColor=white
-[VSCode-url]: https://code.visualstudio.com/
