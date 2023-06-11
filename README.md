@@ -47,7 +47,7 @@ Follow the steps below to set up your API:
 
 5. **Edit Environment Variables**
 
-   Rename the file by deleting `.sample` in `.env.sample` file and edit a file named `.env` in the root directory of your project. This file will contain your environment-specific configurations. Please ensure that all configurations match the ones you set up in Google Cloud SQL.
+   Rename the file by deleting `.sample` in `.env.sample` file and edit a file named `.env` in the root directory of your project. This file will contain your environment-specific configurations. **Please ensure that all configurations match the ones you set up in Google Cloud SQL.**
    
 5. **Start the Server**
 
