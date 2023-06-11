@@ -1,138 +1,76 @@
-<!-- Improved compatibility of back to top link: See: https://github.com/othneildrew/Best-README-Template/pull/73 -->
-<a name="readme-top"></a>
-<!--
-*** Thanks for checking out the Best-README-Template. If you have a suggestion
-*** that would make this better, please fork the repo and create a pull request
-*** or simply open an issue with the tag "enhancement".
-*** Don't forget to give the project a star!
-*** Thanks again! Now go create something AMAZING! :D
--->
+# API Installation Guide
 
+This guide will walk you through the process of setting up and installing an API using Express.js.
 
+## Prerequisites
 
-<!-- PROJECT SHIELDS -->
-<!--
-*** I'm using markdown "reference style" links for readability.
-*** Reference links are enclosed in brackets [ ] instead of parentheses ( ).
-*** See the bottom of this document for the declaration of the reference variables
-*** for contributors-url, forks-url, etc. This is an optional, concise syntax you may use.
-*** https://www.markdownguide.org/basic-syntax/#reference-style-links
--->
-<div align="center">
-  
-[![MIT License][license-shield]][license-url]
+Before you begin, make sure you have the following installed on your system:
 
-</div>
+- Node.js
+- npm (Node Package Manager)
+- Google App Engine
+- Google Cloud SQL
 
-
-<!-- PROJECT LOGO -->
-<br />
-<div align="center">
-  <a href="https://github.com/othneildrew/Best-README-Template">
-    <img src="https://slackmojis.com/emojis/2967-api/download" alt="Logo" height="80">
-  </a>
-
-  <h3 align="center">SoFit User Backend</h3>
-
-  <p align="center">
-    <br />
-    <a href="https://documenter.getpostman.com/view/23251415/2s93m911te"><strong>API docs»</strong></a>
-    <br />
-    <br />
-  </p>
-</div>
-
-
-
-<!-- TABLE OF CONTENTS -->
-<details>
-  <summary>Table of Contents</summary>
-  <ol>
-    <li>
-      <a href="#about-the-project">About The Project</a>
-      <ul>
-        <li><a href="#built-with">Built With</a></li>
-      </ul>
-    </li>
-    <li>
-      <a href="#getting-started">Getting Started</a>
-      <ul>
-        <li><a href="#prerequisites">Prerequisites</a></li>
-        <li><a href="#installation">Installation</a></li>
-      </ul>
-    </li>
-    <li><a href="#license">License</a></li>
-    <li><a href="#contact">Contact</a></li>
-    <!-- <li><a href="#acknowledgments">Acknowledgments</a></li> -->
-  </ol>
-</details>
-
-
-
-<!-- ABOUT THE PROJECT -->
-## About The Project
-<div align=center>
-</div>
-
-### Features
-
-* User API
-<!-- 
-### Built With
-
-<div align="center">
-
-[![Node.js][Node.js]][Nodejs-url]
-[![GoogleCloud][GoogleCloud.com]][GoogleCloud-url]
-
-
-
-</div> -->
-
-
-### Tools
-<div align="center">
-
-[![Git][Git.com]][Git-url]
-[![Github][Github.com]][Github-url]
-[![VSCode][VSCode.com]][VSCode-url]
-[![ESLint][ESLint.com]][ESLint-url]
-[![Postman][Postman.com]][Postman-url]
-
-</div>
-
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
-
-
-
-<!-- GETTING STARTED -->
 ## Getting Started
-To get a local copy up and running follow these simple steps.
 
-### Prerequisites
+Follow the steps below to set up your API:
+1. **Create Cloud SQL**
 
-* node.js
+   Before you set up the instances, you need to establish a connection to Cloud SQL:
+   - Create and set up your Cloud SQL database.
+   - Open database folder
+   - Import the sofit_dev.sql file to define the table structure.
 
-* npm
-  ```sh
-  npm install npm@latest -g
-  ```
+2. **Clone the Repository in Google Cloud Platform**
 
-### Installation
+   After creating the Cloud SQL, you can clone the repository to your local machine:
 
-1. Clone the repo
-   ```sh
+   ```
    git clone https://github.com/sofit-c23-ps233/SoFit-backend.git
    ```
-2. Install NPM packages
-   ```sh
-   npm install
+
+2. **Navigate to the Project Directory**
+
+   Change to the project directory using the following command:
+
    ```
-3. Run the project
-   ```sh
-   npm run dev
+   cd SoFit-backend
    ```
+
+3. **Install Dependencies**
+
+   Install the project dependencies by running the following command:
+
+   ```
+   npm install / npm i
+   ```
+
+4. **Edit Environment Variables**
+
+   Rename the file by deleting ".sample" and edit a file named `.env` in the root directory of your project. This file will contain your environment-specific configurations. Please ensure that all configurations match the ones you set up in Google Cloud SQL.
+5. **Start the Server**
+
+   To start the API server, run the following command:
+
+   ```
+   npm run start
+   ```
+
+6. **Deploy in Google App Engine**
+
+   To deploy the API server, run the following command:
+
+   ```
+   gcloud init
+   gcloud app deploy
+
+   ```
+
+## Additional Configuration
+
+- **Port Configuration**
+
+  If you want to change the default port on which the server runs, you can specify it in the `.env` file by setting the `PORT` variable.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -167,12 +105,6 @@ Project Link: https://github.com/sofit-c23-ps233/SoFit-backend.git
 [license-url]: https://github.com/facronactz/teko/blob/master/LICENSE.txt
 [linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555
 [linkedin-url]: https://linkedin.com/in/othneildrew
-[Node.js]: https://img.shields.io/badge/Node.js-339933?style=for-the-badge&logo=nodedotjs&logoColor=white
-[Nodejs-url]: https://nodejs.org/en/
-[ESLint.com]: https://img.shields.io/badge/eslint-3A33D1?style=for-the-badge&logo=eslint&logoColor=white
-[ESLint-url]: https://eslint.org/
-[Postman.com]: https://img.shields.io/badge/Postman-FF6C37?style=for-the-badge&logo=Postman&logoColor=white
-[Postman-url]: https://www.postman.com/
 [Git.com]: https://img.shields.io/badge/GIT-E44C30?style=for-the-badge&logo=git&logoColor=white
 [Git-url]: https://git-scm.com/
 [GitHub.com]: https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white
